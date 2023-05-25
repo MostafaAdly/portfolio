@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" sizes="16x16"
+        href="https://i.pinimg.com/originals/93/27/e7/9327e7da553a3111959de04fdf2e2eb4.jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Extended" rel="stylesheet" nonce="">
+    <title>{{title}}</title>
+    <link rel="stylesheet"
+        href="https://www.gstatic.com/_/freebird/_/ss/k=freebird.v.WwABb3OD0hg.L.W.O/d=1/rs=AMjVe6h6vlKZ569NCd4l_6OtLmoytWcj8A"
+        data-id="_cl" nonce="">
+    <link
+        href="https://fonts.googleapis.com/css?family=Product+Sans&amp;subset=latin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-ext"
+        rel="stylesheet" type="text/css" nonce="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <style src="{{dir}}/views/css/style.css"></style>
+    <meta name="msapplication-TileImage" content="//ssl.gstatic.com/docs/forms/device_home/windows_144.png">
+    <meta name="msapplication-TileColor" content="#673ab7">
+    <base target="_blank">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name"
+        content="https://i.pinimg.com/originals/93/27/e7/9327e7da553a3111959de04fdf2e2eb4.jpg">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:ttl" content="604800">
+
+    <style>
+
+:root {
+	--transDur: 0.15s;
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body,
+button {
+	color: var(--fg);
+	font: 1em/1.5 "DM Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+	background-color: var(--bg);
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	transition: background-color var(--transDur);
+}
+.notification {
+	padding-bottom: 0.75em;
+	position: fixed;
+	top: 1.5em;
+	right: 1.5em;
+	width: 18.75em;
+	max-width: calc(100% - 3em);
+	transition: transform 0.15s ease-out;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.notification__box,
+.notification__content,
+.notification__btns {
+	display: flex;
+}
+.notification__box,
+.notification__content {
+	align-items: center;
+}
+.notification__box {
+	animation: flyIn 0.3s ease-out;
+	background-color: rgb(26, 15, 15);
+	border-radius: 0.75em;
+	box-shadow: 0 0.5em 1em hsla(var(--hue),10%,10%,0.1);
+	height: 4em;
+	transition:
+		background-color var(--transDur),
+		color var(--transDur);
+}
+.notification--out .notification__box {
+	animation: flyOut 0.3s ease-out forwards;
+}
+.notification__content {
+	padding: 0.375em 1em;
+	width: 100%;
+	height: 100%;
+}
+.notification__icon {
+	flex-shrink: 0;
+	margin-right: 0.75em;
+	width: 2em;
+	height: 2em;
+}
+.notification__icon-svg {
+	width: 100%;
+	height: auto;
+}
+.notification__text {
+	line-height: 1.333;
+}
+.notification__text-title {
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.notification__text-subtitle {
+	font-size: 0.6em;
+	opacity: 0.75;
+}
+.notification__btns {
+	box-shadow: -1px 0 0 hsla(var(--hue),10%,10%,0.15);
+	flex-direction: column;
+	flex-shrink: 0;
+	min-width: 4em;
+	height: 100%;
+	transition: box-shadow var(--transDur);
+}
+.notification__btn {
+	background-color: transparent;
+	box-shadow: 0 0 0 hsla(var(--hue),10%,10%,0.5) inset;
+	font-size: 0.6em;
+	line-height: 1;
+	font-weight: 500;
+	height: 100%;
+	padding: 0 0.5rem;
+	transition:
+		background-color var(--transDur),
+		color var(--transDur);
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.notification__btn-text {
+	display: inline-block;
+	pointer-events: none;
+}
+.notification__btn:first-of-type {
+	border-radius: 0 0.75rem 0 0;
+}
+.notification__btn:last-of-type {
+	border-radius: 0 0 0.75rem 0;
+}
+.notification__btn:only-child {
+	border-radius: 0 0.75rem 0.75rem 0;
+}
+.notification__btn + .notification__btn {
+	box-shadow: 0 -1px 0 hsla(var(--hue),10%,10%,0.15);
+	font-weight: 400;
+}
+.notification__btn:active,
+.notification__btn:focus {
+	background-color: hsl(var(--hue),10%,95%);
+}
+.notification__btn:focus {
+	outline: transparent;
+}
+
+@supports selector(:focus-visible) {
+	.notification__btn:focus {
+		background-color: transparent;
+	}
+	.notification__btn:focus-visible,
+	.notification__btn:active {
+		background-color: hsl(var(--hue),10%,95%);
+	}
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+	.notification__box {
+		background-color: hsl(var(--hue),10%,30%);
+	}
+	.notification__btns {
+		box-shadow: -1px 0 0 hsla(var(--hue),10%,90%,0.15);
+	}
+	.notification__btn + .notification__btn {
+		box-shadow: 0 -1px 0 hsla(var(--hue),10%,90%,0.15);
+	}
+	.notification__btn:active,
+	.notification__btn:focus {
+		background-color: hsl(var(--hue),10%,35%);
+	}
+
+	@supports selector(:focus-visible) {
+		.notification__btn:focus {
+			background-color: transparent;
+		}
+		.notification__btn:focus-visible,
+		.notification__btn:active {
+			background-color: hsl(var(--hue),10%,35%);
+		}
+	}
+}
+
+/* Animations */
+@keyframes flyIn {
+	from {
+		transform: translateX(calc(100% + 1.5em));
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes flyOut {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(100% + 1.5em));
+	}
+}
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+            font-weight: normal;
+        }
+
+        .radio-block {
+            text-align: center;
+        }
+
+        .radio-content {
+            display: inline-block;
+            width: 180px;
+            text-align: left;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]+label {
+            color: black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        input[type="radio"]+label span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: -2px 5px 0 0;
+            vertical-align: middle;
+            border: 1px solid #cecece;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background .2s,
+                transform .2s;
+        }
+
+        input[type="radio"]+label span:hover,
+        input[type="radio"]+label:hover span {
+            transform: scale(1.2);
+        }
+
+        input[type="radio"]:checked+label span {
+            background: #971d1d;
+            background: -webkit-linear-gradient(to right, #010803, #941a9f);
+            background: linear-gradient(to right, #000000, #971d1d);
+            box-shadow: 0px 0px 0px 3px white inset;
+        }
+
+        input[type="radio"]:checked+label {
+            color: #aa3838;
+        }
+
+
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+                const nc = new NotificationCenter();
+            });
+
+
+
+            class NotificationCenter {
+                constructor() {
+                    this.items = [];
+                    this.itemsToKill = [];
+                    this.messages = NotificationMessages();
+                    this.killTimeout = null;
+
+                    
+                    let Btn = document.getElementsByName("submit");
+                    Btn = !Btn.length ? null : Btn[0];
+                    if(Btn != null)
+                        Btn.addEventListener('click',(click) => {
+                            for(var a in this.items)
+                                this.killNote(this, this.items[a].id);
+                            this.spawnNote();
+                            setTimeout(() => {
+                                document.getElementsByClassName("o3Dpx")[0].remove()
+                                document.getElementById("title").innerHTML = "Your form was submitted successfully."
+                                document.getElementById("description").innerHTML = "You can close this page now."
+                                document.title = `${document.title} - Submitted`
+                            }, 10)
+                    });
+                }
+                spawnNote() {
+                    const id = this.random(0, 2 ** 32, true).toString(16);
+                    const draw = this.random(0, this.messages.length - 1, true);
+                    const message = this.messages[draw];
+                    const note = new Notification({
+                        id: `note-${id}`,
+                        icon: message.icon,
+                        title: message.title,
+                        subtitle: message.subtitle,
+                        actions: message.actions
+                    });
+                    const transY = 100 * this.items.length;
+
+                    note.el.style.transform = `translateY(${transY}%)`;
+                    note.el.addEventListener("click", this.killNote.bind(this, note.id));
+                    this.items.push(note);
+                    setTimeout(()=>{
+                        this.killNote.bind(this, note.id)
+                    },3000)
+                }
+                spawnNotes(amount) {
+                    let count = typeof amount === "number" ? amount : this.random(1, 5, true);
+
+                    {{!-- while (count--)
+                        this.spawnNote(); --}}
+                }
+                killNote(id, e) {
+                    const note = this.items.find(item => item.id === id);
+                    const tar = e.target;
+
+                    if (note && tar.getAttribute("data-dismiss") === id) {
+                        note.el.classList.add("notification--out");
+                        this.itemsToKill.push(note);
+
+                        clearTimeout(this.killTimeout);
+
+                        this.killTimeout = setTimeout(() => {
+                            this.itemsToKill.forEach(itemToKill => {
+                                document.body.removeChild(itemToKill.el);
+
+                                const left = this.items.filter(item => item.id !== itemToKill.id);
+                                this.items = [...left];
+                            });
+
+                            this.itemsToKill = [];
+
+                            if (!this.items.length)
+                                this.spawnNotes();
+                            else
+                                this.spawnNotes(this.random(0, 1, true));
+
+                            this.shiftNotes();
+                        }, note.killTime);
+                    }
+                }
+                shiftNotes() {
+                    this.items.forEach((item, i) => {
+                        const transY = 100 * i;
+                        item.el.style.transform = `translateY(${transY}%)`;
+                    });
+                }
+                random(min, max, round = false) {
+                    const percent = crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
+                    const relativeValue = (max - min) * percent;
+
+                    return min + (round === true ? Math.round(relativeValue) : +relativeValue.toFixed(2));
+                }
+            }
+
+            class Notification {
+                constructor(args) {
+                    this.args = args;
+                    this.el = null;
+                    this.id = null;
+                    this.killTime = 3000;
+                    this.init(args);
+                }
+                init(args) {
+                    const { id, icon, title, subtitle, actions } = args;
+                    const block = "notification";
+                    const parent = document.body;
+                    const xmlnsSVG = "http://www.w3.org/2000/svg";
+                    const xmlnsUse = "http://www.w3.org/1999/xlink";
+
+                    const note = this.newEl("div");
+                    note.id = id;
+                    note.className = block;
+                    parent.insertBefore(note, parent.lastElementChild);
+
+                    const box = this.newEl("div");
+                    box.className = `${block}__box`;
+                    note.appendChild(box);
+
+                    const content = this.newEl("div");
+                    content.className = `${block}__content`;
+                    box.appendChild(content);
+
+                    const _icon = this.newEl("div");
+                    _icon.className = `${block}__icon`;
+                    content.appendChild(_icon);
+
+                    const iconSVG = this.newEl("svg", xmlnsSVG);
+                    iconSVG.setAttribute("class", `${block}__icon-svg`);
+                    iconSVG.setAttribute("role", "img");
+                    iconSVG.setAttribute("aria-label", icon);
+                    iconSVG.setAttribute("width", "24px");
+                    iconSVG.setAttribute("height", "24px");
+                    _icon.appendChild(iconSVG);
+
+                    const iconUse = this.newEl("use", xmlnsSVG);
+                    iconUse.setAttributeNS(xmlnsUse, "href", `#${icon}`);
+                    iconSVG.appendChild(iconUse);
+
+                    const text = this.newEl("div");
+                    text.className = `${block}__text`;
+                    content.appendChild(text);
+
+                    const _title = this.newEl("div");
+                    _title.className = `${block}__text-title`;
+                    _title.textContent = title;
+                    text.appendChild(_title);
+
+                    if (subtitle) {
+                        const _subtitle = this.newEl("div");
+                        _subtitle.className = `${block}__text-subtitle`;
+                        _subtitle.textContent = subtitle;
+                        text.appendChild(_subtitle);
+                    }
+
+                    const btns = this.newEl("div");
+                    btns.className = `${block}__btns`;
+                    box.appendChild(btns);
+
+                    actions.forEach(action => {
+                        const btn = this.newEl("button");
+                        btn.className = `${block}__btn`;
+                        btn.type = "button";
+                        btn.setAttribute("data-dismiss", id);
+
+                        const btnText = this.newEl("span");
+                        btnText.className = `${block}__btn-text`;
+                        btnText.textContent = action;
+
+                        btn.appendChild(btnText);
+                        btns.appendChild(btn);
+                    });
+
+                    this.el = note;
+                    this.id = note.id;
+                }
+                newEl(elName, NSValue) {
+                    if (NSValue)
+                        return document.createElementNS(NSValue, elName);
+                    else
+                        return document.createElement(elName);
+                }
+            }
+
+            function NotificationMessages() {
+                return [
+                    {
+                        icon: "success",
+                        title: "Form Submitted",
+                        actions: ["Close"]
+                    }
+                ];
+            }
+
+    </script>
+
+</head>
+
+<body>
+    <svg display="none">
+        <symbol id="clock" viewBox="0 0 32 32">
+            <circle r="15" cx="16" cy="16" fill="none" stroke="currentColor" stroke-width="2" />
+            <polyline points="16,7 16,16 23,16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="error" viewBox="0 0 32 32">
+            <circle r="15" cx="16" cy="16" fill="none" stroke="hsl(13,90%,55%)" stroke-width="2" />
+            <line x1="10" y1="10" x2="22" y2="22" stroke="hsl(13,90%,55%)" stroke-width="2" stroke-linecap="round" />
+            <line x1="22" y1="10" x2="10" y2="22" stroke="hsl(13,90%,55%)" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+        <symbol id="message" viewBox="0 0 32 32">
+            <polygon points="1,6 31,6 31,26 1,26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <polyline points="1,6 16,18 31,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="success" viewBox="0 0 32 32">
+            <circle r="15" cx="16" cy="16" fill="none" stroke="hsl(93,90%,40%)" stroke-width="2" />
+            <polyline points="9,18 13,22 23,12" fill="none" stroke="hsl(93,90%,40%)" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="up" viewBox="0 0 32 32">
+            <circle r="15" cx="16" cy="16" fill="none" stroke="currentColor" stroke-width="2" />
+            <polyline points="11,15 16,10 21,15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <line x1="16" y1="10" x2="16" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </symbol>
+        <symbol id="warning" viewBox="0 0 32 32">
+            <polygon points="16,1 31,31 1,31" fill="none" stroke="hsl(33,90%,55%)" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <line x1="16" y1="12" x2="16" y2="20" stroke="hsl(33,90%,55%)" stroke-width="2" stroke-linecap="round" />
+            <line x1="16" y1="25" x2="16" y2="25" stroke="hsl(33,90%,55%)" stroke-width="3" stroke-linecap="round" />
+        </symbol>
+    </svg>
+
+    <div class="teQAzf">
+        <form action="/received-forms/{{id}}" method="post" target="_blank">
+            <div class="RH5hzf RLS9Fe">
+                <div class="lrKTG">
+                    <div class="Dq4amc">
+                        <div class="m7w29c O8VmIc tIvQIf">
+                            <div class="JH79cc RVEQke b33AEc" style="background-color:rgb({{colors.[0]}}, {{colors.[1]}}, {{colors.[2]}})"></div>
+                            <div class="N0gd6">
+                                <div class="ahS2Le">
+                                    <div class="F9yp7e ikZYwf LgNcQe" dir="auto" role="heading" aria-level="1" id="title">
+                                        {{#if id}}
+                                            {{title}}
+                                        {{else}}
+                                            Form was not found
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                <div class="cBGGJ OIC90c" dir="auto" id="description">{{#if id}}{{description}}{{else}}Please make sure
+                                    that it was not a typo{{/if}}
+                                </div>
+                                <div jsname="F0H8Yc" class="liS6Hc"></div>
+                            </div>
+                            <div class="zAVwcb"></div>
+                        </div>
+                    </div>
+                    <div class="o3Dpx" role="list">
+                        {{#each questions}}
+                        <div class="Qr7Oae" role="listitem">
+                            <div jsmodel="CP1oW"
+                                data-params="%.@.[1316290449,&quot;Name&quot;,null,0,[[1997459812,[],true,[],[],null,null,null,null,null,[null,[]]]],null,null,null,[],null,null,[null,&quot;Name&quot;]],&quot;i1&quot;,&quot;i2&quot;,&quot;i3&quot;,false]">
+                                <div class="geS5n">
+                                    <div class="z12JJ" style="margin: 0">
+                                        <div class="M4DNQ">
+                                            <div id="i1" class="HoXoMd D1wxyf RjsPE" style="font-size: 20px" role="heading" aria-level="3"
+                                                aria-describedby="i4"><span class="M7eMe">{{this.title}}</span><span
+                                                    class="vnumgf" id="i4" aria-label="Required question"> *</span>
+                                            </div>
+                                            <div class="gubaDc OIC90c RjsPE" id="i2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="AgroKb">
+                                        <div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd">
+                                            {{#if (if_eq type 0)}}
+                                            <div class="aCsJod oJeWuf">
+                                                {{/if}}
+                                                <div class="aXBtI Wic03c">
+                                                    <div class="Xb9hP">
+                                                        {{#if (if_eq type 0)}} {{!-- TEXT INPUT --}}
+                                                            {{#if (if_eq this.required 'true')}}
+                                                            <input type="text" class="whsOnd zHQkBf" name="{{this.questionId}}/#/{{@index}}/#/text" placeholder="Your answer"
+                                                                autocomplete="off" tabindex="0" aria-labelledby="i1" aria-describedby="i2 i3" dir="auto" data-initial-dir="auto"
+                                                                data-initial-value="" style="font-size: 15px" required>
+                                                            {{else}}
+                                                            <input type="text" class="whsOnd zHQkBf"
+                                                                name="{{this.questionId}}/#/{{@index}}/#/text" placeholder="Your answer"
+                                                                autocomplete="off" tabindex="0" aria-labelledby="i1"
+                                                                aria-describedby="i2 i3" dir="auto" data-initial-dir="auto"
+                                                                data-initial-value="" style="font-size: 15px">
+                                                            {{/if}}
+                                                        {{else}} {{!-- MCQ --}}
+                                                        <form action="">
+                                                        <div class="radio-block">
+                                                            {{#each this.answers}}
+
+                                                                <div class="radio-content">
+                                                                    <input id="{{../this.questionId}}/#/{{@index}}/#/radio" type="radio" name="{{../this.questionId}}/#/-1/#/name" value="{{this}}" required>
+                                                                    <label for="{{../this.questionId}}/#/{{@index}}/#/radio"><span></span> {{this}}</label>
+                                                                </div><br>
+
+                                                            {{/each}}
+                                                        </div>
+                                                        </form>
+        {{/if}}
+        <div class="ndJi5d snByac" aria-hidden="true"></div>
+    </div>
+    {{#if (if_eq type 0)}}
+    <div class="OabDMe cXrdqd"></div>
+    <div class="i9lrp mIZh1c"></div>{{/if}}
+    </div>
+    {{#if (if_eq type 0)}}
+    </div>
+    {{/if}}</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    {{/each}}
+    {{!-- SUBMIT --}}
+    {{#if id}}
+    <div class="ThHDze">
+        <div class="DE3NNc CekdCb">
+            <div class="lRwqcd">
+                <button type="submit" id="submit" name="submit" class="uArJ5e UQuaGc Y5sE8d VkkpIf" style="background-color:rgb({{colors.[0]}}, {{colors.[1]}}, {{colors.[2]}})">
+                    <span class="l4V7wb Fxmcue">
+                        <span class="NPEfkd RveJvd snByac">Submit
+                        </span>
+                        <input type="text" hidden="true" name="uuid" value="{{random_uuid}}">
+                        <input type="text" hidden="true" name="id" value="{{id}}">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>

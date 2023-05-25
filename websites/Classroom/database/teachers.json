@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Dr. Mohamed Khalaf",
+        "email": "mohamedkhalaf@cic-cairo.com",
+        "image": "https://careercenterjseng.files.wordpress.com/2015/03/prof.jpg",
+        "password": "123123",
+        "classrooms": [
+            "math-class-id",
+            "english-class-id"
+        ]
+    }
+]

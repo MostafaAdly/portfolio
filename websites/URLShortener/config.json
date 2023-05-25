@@ -1,0 +1,16 @@
+{
+  "name": "URL_SHORTENER",
+  "script": "shortener.js",
+  "console-color": "blue",
+  "urls": {
+    "test": "https://google.com/",
+    "s6g8xpb2o": "https://www.google.com/",
+    "21z79nhqk": "https://discord.com/api/oauth2/authorize?client_id=885671957876596776&permissions=8&scope=bot",
+    "cq6hbrgf7": "https://www.youtube.com/watch?v=5QgYL78ANQA&list=RDGMEMWO-g6DgCWEqKlDtKbJA1Gw&index=21",
+    "n2mzk640l": "https://www.youtube.com/watch?v=GGSXvQeyipQ",
+    "dbtcpuyc7": "https://www.reddit.com/r/thanksihateit/comments/sfm31u/thanks_i_hate_geese_now/?utm_medium=android_app&utm_source=share",
+    "4f0x6j900": "https://www.youtube.com/watch?v=_f1IsekmmJQ&list=RDMM&index=16",
+    "ieejaz6kg": "https://docs.google.com/forms/d/e/1FAIpQLScRGgtLXv9x-P1tjnKi9xMYveNf3xdMeG4epzDJXBAvE2MXQQ/viewform?pli=1&pli=1",
+    "li4s3lghs": "https://pastebin.com/2iMj2DZV"
+  }
+}

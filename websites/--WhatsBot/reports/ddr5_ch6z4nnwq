@@ -1,0 +1,52 @@
+Double Data Rate 5 Synchronous Dynamic Random-Access Memory (DDR5 SDRAM) is a type of synchronous dynamic random-access memory. Compared to its predecessor DDR4 SDRAM, DDR5 was planned to reduce power consumption, while doubling bandwidth. The standard, originally targeted for 2018, was released on 14 July 2020.A new feature called Decision Feedback Equalization (DFE) enables I/O speed scalability for higher bandwidth and performance improvement. DDR5 supports more bandwidth than its predecessor, DDR4, with 4.8 gigabits per second possible, but not shipping at launch. DDR5 has about the same latency as DDR4 and DDR3. DDR5 octuples the maximum DIMM capacity from 64 GB to 512 GB. DDR5 also has higher frequencies than DDR4.
+Rambus announced a working DDR5 DIMM in September 2017. On November 15, 2018, SK Hynix announced completion of its first DDR5 RAM chip; it runs at 5200 MT/s at 1.1 V. In February 2019, SK Hynix announced a 6400 MT/s chip, the highest speed specified by the preliminary DDR5 standard.  Some companies were planning to bring the first products to market by the end of 2019. The world's first DDR5 DRAM chip was officially launched by SK Hynix on October 6, 2020.The separate JEDEC standard LPDDR5 (Low Power Double Data Rate 5), intended for laptops and smartphones, was released in February 2019.Compared to DDR4, DDR5 further reduces memory voltage to 1.1 V, thus reducing power consumption. DDR5 modules incorporate on-board voltage regulators in order to reach higher speeds. DDR5 supports a speed of 51.2 GB/s per module and 2 memory channels per module.There is a general expectation that most use-cases that currently use DDR4 will eventually migrate to DDR5.
+In August 2021, Samsung revealed a 512 GB 7200 MT/s RAM DIMM.
+
+
+== DIMMs versus memory chips ==
+While previous SDRAM generations allowed unbuffered DIMMs that consisted of memory chips and passive wiring (plus a small serial presence detect ROM), DDR5 DIMMs require additional active circuitry, making the interface to the DIMM different from the interface to the RAM chips themselves.
+DDR5 (L)RDIMMs use 12V and UDIMMs use 5V input. DDR5 DIMMs are supplied with management interface power at 3.3V, and use on-board circuitry (a power management integrated circuit and associated passive components) to convert to the lower voltage required by the memory chips.  Final voltage regulation close to the point of use provides more stable power, and mirrors the development of voltage regulator modules for CPU power supplies.
+Unlike DDR4, all DDR5 chips have on-die ECC, where errors are detected and corrected before sending data to the CPU. This, however, is not the same as true ECC memory with an extra data correction chip on the memory module. DDR5's on-die error correction is to improve reliability and to allow denser RAM chips which lowers the per-chip defect rate. There still exist non-ECC and ECC DDR5 DIMM variants; the ECC variants have extra data lines to the CPU to send error-detection data, letting the CPU detect and correct errors that occurred in transit.Each DIMM has two independent channels.  While earlier SDRAM generations had one CA (Command/Address) bus controlling 64 (for non-ECC) or 72 (for ECC) data lines, each DDR5 DIMM has two CA buses controlling 32 (non-ECC) or 40 (ECC) data lines each, for a total of 64 or 80 data lines.  This four-byte bus width times a doubled minimum burst length of 16 preserves the minimum access size of 64 bytes, which matches the cache line size used by x86 microprocessors.
+
+
+== Operation ==
+Standard DDR5 memory speeds range from 4400 to 7600 million transfers per second (PC5-35200 to PC5-60800). Higher speeds may be added later, as happened with previous generations.
+Compared to DDR4 SDRAM, the minimum burst length was doubled to 16, with the option of "burst chop" after eight transfers. The addressing range is also slightly extended as follows:
+
+The number of chip ID bits remains at three, allowing up to eight stacked chips.
+A third bank group bit (BG2) was added, allowing up to eight bank groups.
+The maximum number of banks per bank group remains at four.
+The number of row address bits remains at 17, for a maximum of 128K rows.
+One more column address bit (C10) is added, allowing up to 8192 columns (1 KB pages) in ×4 chips.
+The least-significant three column address bits (C0, C1, C2) are removed; all reads and writes must begin at a column address which is a multiple of eight.
+One bit is reserved for addressing expansion as either a fourth chip ID bit (CID3) or an additional row address bit (R17).
+
+
+=== Command encoding ===
+The command encoding was significantly rearranged and takes inspiration from that of LPDDR4; commands are sent using either one or two cycles with 14-bit bus.  Some simple commands (e.g. precharge) take one cycle, while any that include an address (activate, read, write) use two cycles to include 28 bits of information.
+Also like LPDDR, there are now 256 eight-bit mode registers, rather than eight 13-bit registers.  Also, rather than one register (MR7) being reserved for use by the registered clock driver chip, a complete second bank of mode registers is defined (selected using the CW bit).
+The "Write Pattern" command is new for DDR5; this is identical to a write command, but the range is filled in with copies of a one-byte mode register (which defaults to all-zero) instead of individual data.  Although this normally takes the same amount of time as a normal write, not driving the data lines saves energy.  Also, writes to multiple banks may be interleaved more closely as the command bus is freed earlier.
+The multi-purpose command includes various sub-commands for training and calibration of the data bus.
+
+
+== Support ==
+
+
+=== Intel ===
+12th generation Alder Lake and 13th generation Raptor Lake CPUs support both DDR5 and DDR4 but, usually, there are only DIMM sockets for either one or the other on a motherboard. Some mainboards with Intel's H610 chipset that support both DDR4 and DDR5, but not simultaneously.A leaked slide shows planned DDR5 support on Intel's 2022 Sapphire Rapids processors.
+
+
+=== AMD ===
+DDR5 and LPDDR5 are supported by AMD's Ryzen 6000 series mobile APUs, powered by their Zen 3+ architecture. AMD have also now released their AMD Ryzen 7000 series processors, which all support DDR5 memory as standard.Upcoming Epyc Genoa and Bergamo CPUs have been confirmed by AMD to support 12-channel DDR5 on the SP5 socket. AMD has also confirmed that Zen 4 consumer CPUs will support DDR5 on the new AM5 socket.
+
+
+=== Apple ===
+Apple's M1 Pro, M1 Max, M1 Ultra and M2 all support LPDDR5.
+
+
+== References ==
+
+
+== External links ==
+Main Memory: DDR4 & DDR5 SDRAM / JEDEC
+DDR5 Full Spec Draft Rev0.1 –  unfinished draft of the DDR5 standard

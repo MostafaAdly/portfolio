@@ -1,0 +1,5 @@
+{
+    "name": "WABOT",
+    "script": "wabot.js",
+    "console-color": "green"
+}

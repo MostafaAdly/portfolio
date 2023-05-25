@@ -1,0 +1,8 @@
+{
+    "name": "WhatsApp Report Bot",
+    "filename": "WhatsApp Report Bot.tar.gz",
+    "languages": "NodeJS",
+    "time": "22 Oct. 2022",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png",
+    "features": "Searchs for a report for your college in less than 1.5 seconds, spams any message to any whatsapp user, sends a private message to any whatsapp user."
+}

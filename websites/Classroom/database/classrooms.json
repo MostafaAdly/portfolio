@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Mathematics 5",
+        "id": "math-class-id",
+        "description": "Here we study mathematics to waste our time for no reason.",
+        "image": "https://i.pinimg.com/736x/51/7e/89/517e890cd1d9606b78ccbdd08f0fdf1d.jpg",
+        "posts": {
+            "123123123123123": {
+                "id": "123123123123123",
+                "by": "mostafa@adly.com",
+                "time": "51/3/2039  7:39 AM",
+                "text": "اهلا\nوسهلا\n:)",
+                "comments": {
+                    "123131231298123213": {
+                        "by": "mostafa@adly.com",
+                        "time": "02/94/2021  11:33 AM",
+                        "text": "where's the assignment, teahcer"
+                    },
+                    "12312321386456456": {
+                        "by": "mostafa@adly.com",
+                        "time": "02/22/2022  11:22 AM",
+                        "text": "give my kids back"
+                    }
+                }
+            },
+            "2345645612313453": {
+                "id": "2345645612313453",
+                "by": "mohamedkhalaf@cic-cairo.com",
+                "time": "33/3/2033  3:31 AM",
+                "text": "You have a quiz next lecture",
+                "comments": {
+                    "312312345423123213": {
+                        "by": "mostafa@adly.com",
+                        "time": "12/54/2922  8:12 PM",
+                        "text": "I want my rights, kids"
+                    }
+                }
+            },
+            "2345645612313454": {
+                "id": "2345645612313454",
+                "by": "mohamedkhalaf@cic-cairo.com",
+                "time": "33/3/2033  3:31 AM",
+                "text": "do your homework",
+                "comments": {
+                    "312312345423123213": {
+                        "by": "mostafa@adly.com",
+                        "time": "12/54/2922  8:12 PM",
+                        "text": "I want my rights, kids"
+                    }
+                }
+            },
+            "2345645612313455": {
+                "id": "2345645612313455",
+                "by": "mohamedkhalaf@cic-cairo.com",
+                "time": "33/3/2033  3:31 AM",
+                "text": "Make a report about data science and analasys",
+                "comments": {
+                    "312312345423123213": {
+                        "by": "mostafa@adly.com",
+                        "time": "12/54/2922  8:12 PM",
+                        "text": "I want my rights, kids"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "English",
+        "id": "english-class-id",
+        "description": "class-description-heres",
+        "image": "https://media.istockphoto.com/id/1047570732/vector/english.jpg?s=612x612&w=0&k=20&c=zgafUJxCytevU-ZRlrZlTEpw3mLlS_HQTIOHLjaSPPM=",
+        "posts": [
+            {
+                "by": "pilo@filo.com",
+                "time": "13/3/1993  1:22 AM",
+                "text": "hello my fello english students",
+                "comments": {}
+            }
+        ]
+    }
+]

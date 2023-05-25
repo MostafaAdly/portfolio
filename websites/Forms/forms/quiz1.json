@@ -1,0 +1,70 @@
+{
+    "id": "test",
+    "title": "Details about you.",
+    "description": "Tell us about yourself.",
+    "questions": [
+        {
+            "title": "What's your name?",
+            "required": true,
+            "type": 0
+        },
+        {
+            "title": "What's your hobby?",
+            "required": false,
+            "type": 1,
+            "answers": [
+                "Programming",
+                "Soccer",
+                "Football",
+                "Studying",
+                "Reading",
+                "Movies"
+            ]
+        },
+        {
+            "title": "What's your age?",
+            "required": false,
+            "type": 1,
+            "answers": [
+                "19",
+                "20",
+                "21",
+                "22"
+            ]
+        },
+        {
+            "title": "What's your talent?",
+            "required": false,
+            "type": 1,
+            "answers": [
+                "Programming",
+                "Swimming",
+                "Listening",
+                "Consulting"
+            ]
+        },
+        {
+            "title": "What's your GPA?",
+            "required": false,
+            "type": 1,
+            "answers": [
+                "2.2",
+                "2.45",
+                "3.59",
+                "1.92"
+            ]
+        },
+        {
+            "title": "What's your pet name?",
+            "required": false,
+            "type": 1,
+            "answers": [
+                "Dogty",
+                "Kitky",
+                ":)",
+                ":("
+            ]
+        }
+    ],
+    "colors": "ran"
+}

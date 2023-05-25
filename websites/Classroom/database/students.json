@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Mostafa Adly Amar",
+        "email": "mostafa@adly.com",
+        "password": "123123",
+        "image": "/{dir}/views/img/mostafa.jpg",
+        "classrooms": [
+            "math-class-id",
+            "english-class-id"
+        ]
+    }
+]

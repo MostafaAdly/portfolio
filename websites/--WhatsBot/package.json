@@ -1,0 +1,23 @@
+{
+  "name": "whatsbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon forms.js -e js,hbs,css,scss"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.0",
+    "wikipedia": "^1.1.9"
+  }
+}

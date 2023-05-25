@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{name}} - Developer</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="developer dev-adly Mostafa Adly" name="keywords">
+  <meta content="Software Engineer - Java/NodeJS Developer" name="description">
+  <link href="{{pfp}}" rel="icon">
+  <link href="{{dir}}/views/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{dir}}/views/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="{{dir}}/views/css/style.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body id="page-top">
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">@mostafa.adly.amar</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Services & Skills</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="home" class="intro route bg-image" style="background-image: url({{dir}}/views/img/pro2.png)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">{{name}}</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Communications Engineer, Software Developer, Java Developer, NodeJS Developer, Apps Developer, Desktop Applications Developer, Web Developer</span><strong class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="{{pfp}}" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info" style="padding-top: 15px">
+                      <p><span class="title-s">Name: </span> <span>{{name}}</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Java/ NodeJS Developer</span></p>
+                      <p><span class="title-s">Email: </span> <span>MostafaAdlyAmar@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span>+20 0114 3265 444</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  {{#each skills}}
+                  <span>{{this.name}}</span> <span class="pull-right">{{this.amount}}%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{this.amount}}%;" aria-valuenow="{{this.amount}}" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About me
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Iam an experienced software developer, who has been in this field for 4.5+ years. Everyday is a new day for learning something new in programming.
+                    90% of my projects are private so some of the rest will be shown down below.
+                  </p>
+                  <p class="lead">
+                    I have self-assurance that I can be the best at my job with my hardwork and talent. Always trying to develop new skills, always trying to learn something new.
+                  </p>
+                  <p class="lead">
+                    Currently, I'm studing (Communication Engineering / Computer Science / Satellites) at my 3th year in college.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="section-counter paralax-mf bg-image" style="background-image: url({{dir}}/views/img/counters-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            {{#each experiences}}
+            <div class="col-sm-3 col-lg-3">
+                <div class="{{this.box}}">
+                    <div class="counter-ico">
+                        <span class="ico-circle"><i class="{{this.class}}"></i></span>
+                    </div>
+                    <div class="counter-num">
+                        <p class="counter">{{this.amount}}</p>
+                        <span class="counter-text">{{this.name}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<!--/ Section Portfolio Star /-->
+<section id="work" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Recent Projects
+          </h3>
+          <p class="subtitle-a">
+            Check my latest projects here. Uploading more projects soon.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {{#each projects}}
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="download/{{this.name}}">
+            <div class="work-img">
+              <img src="{{this.image}}" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">{{this.name}}</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">{{this.languages}}</span> / <span class="w-date">{{this.time}}</span> /
+                    <span class="w-date">{{this.size}}</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <ion-icon name="cloud-download-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!--/ Section Services Star /-->
+<section id="service" class="services-mf route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-box text-center">
+                    <h3 class="title-a" style="padding-top:50px">
+                        Services
+                    </h3>
+                    <p class="subtitle-a">
+                        Learn more about my skills & the services I provide
+                    </p>
+                    <div class="line-mf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{#each services}}
+            <div class="col-md-4">
+                <div class="service-box">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="ion-monitor"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">{{this.name}}</h2>
+                        <p class="s-description text-center">
+                            {{this.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+<!--/ Section Services End /-->
+<!--/ Section Portfolio End /-->
+
+  
+  <div class="testimonials paralax-mf bg-image" style="background-image: url({{dir}}/views/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="testimonial-mf" class="owl-carousel owl-theme">
+            <div class="testimonial-box">
+              <div class="author-test">
+                <img src="{{dir}}/views/img/pro3.png" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">{{name}}</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                  Be a one of a kind.
+                </p>
+                <span class="comit"><i class="fa fa-quote-right"></i></span>
+              </div>
+            </div>
+            <div class="testimonial-box">
+              <div class="author-test">
+                <img src="/{{dir}}/views/img/Napoléon Bonaparte.png" alt="" class="rounded-circle b-shadow-a">
+                <span class="author">Napoléon Bonaparte</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                  Courage isn't having the strength to go on - it is going on when you don't have strength.
+                </p>
+                <span class="comit"><i class="fa fa-quote-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+  <script src="{{dir}}/views/lib/jquery/jquery.min.js"></script>
+  <script src="{{dir}}/views/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="{{dir}}/views/lib/popper/popper.min.js"></script>
+  <script src="{{dir}}/views/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{dir}}/views/lib/easing/easing.min.js"></script>
+  <script src="{{dir}}/views/lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="{{dir}}/views/lib/counterup/jquery.counterup.js"></script>
+  <script src="{{dir}}/views/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="{{dir}}/views/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="{{dir}}/views/lib/typed/typed.min.js"></script>
+  <script src="{{dir}}/views/js/main.js"></script>
+
+</body>
+</html>

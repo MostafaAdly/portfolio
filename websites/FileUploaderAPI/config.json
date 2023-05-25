@@ -1,0 +1,5 @@
+{
+    "name": "FileUploader",
+    "script": "file-uploader.js",
+    "console-color": "yellow"
+}
